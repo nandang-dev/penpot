@@ -5,9 +5,9 @@
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
-    "build": "node esbuild.config.mjs",
-    "start": "node dist/index.js",
-    "start:dev": "tsx --env-file=../backend/scripts/_env src/index.ts",
+    "build": "node init && node esbuild.config.mjs",
+    "start": "node init && node dist/index.js",
+    "start:dev": "node init && tsx --env-file=../backend/scripts/_env src/index.ts",
     "types:check": "tsc --noEmit",
     "test": "vitest run",
     "fmt": "prettier --write src/ test/",

@@ -2,7 +2,7 @@
   "name": "common",
   "version": "1.0.0",
   "license": "MPL-2.0",
-  "author": "Kaleidos INC Sucursal en España SL",
+  "author": "Kaleidos INC Sucursal en Espa\u00f1a SL",
   "private": true,
   "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61",
   "type": "module",
@@ -29,7 +29,7 @@
     "fmt:js": "prettier -c src/**/*.js -w",
     "lint": "pnpm run lint:clj",
     "watch:test": "concurrently \"clojure -M:dev:shadow-cljs watch test\" \"nodemon -C -d 2 -w target/tests/ --exec 'node target/tests/test.js'\"",
-    "build:test": "clojure -M:dev:shadow-cljs compile test",
+    "build:test": "node init && clojure -M:dev:shadow-cljs compile test",
     "test": "pnpm run build:test && node target/tests/test.js",
     "test:quiet": "node ./scripts/test-quiet.js"
   }

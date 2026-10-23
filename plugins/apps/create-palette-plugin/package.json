@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build --emptyOutDir",
+    "dev": "node init && vite",
+    "build": "node init && vite build --emptyOutDir",
     "watch": "vite build --watch --mode development",
     "serve": "vite preview",
     "init": "concurrently --kill-others --names build,serve \"pnpm run watch\" \"pnpm run serve\"",

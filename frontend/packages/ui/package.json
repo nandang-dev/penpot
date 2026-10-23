@@ -20,7 +20,7 @@
   },
   "scripts": {
     "watch": "vite build --watch",
-    "build": "vite build"
+    "build": "node init && vite build"
   },
   "devDependencies": {
     "@babel/core": "^8.0.6",

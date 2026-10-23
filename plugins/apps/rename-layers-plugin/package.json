@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "ng build rename-layers-plugin && pnpm run build:plugin",
-    "build:dev": "ng build rename-layers-plugin --configuration development",
-    "build:plugin": "node ../../tools/scripts/build-plugin.mjs --plugin=rename-layers-plugin",
+    "build": "node init && ng build rename-layers-plugin && pnpm run build:plugin",
+    "build:dev": "node init && ng build rename-layers-plugin --configuration development",
+    "build:plugin": "node init && node ../../tools/scripts/build-plugin.mjs --plugin=rename-layers-plugin",
     "watch": "node ../../tools/scripts/build-plugin.mjs --plugin=rename-layers-plugin --watch",
     "serve": "ng serve rename-layers-plugin",
     "init": "concurrently --kill-others --names plugin,serve \"pnpm run watch\" \"pnpm run serve\"",
