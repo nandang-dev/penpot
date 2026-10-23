@@ -2,7 +2,7 @@
   "name": "exporter",
   "version": "1.0.0",
   "license": "MPL-2.0",
-  "author": "Kaleidos INC Sucursal en España SL",
+  "author": "Kaleidos INC Sucursal en Espa\u00f1a SL",
   "private": true,
   "packageManager": "pnpm@12.15.0+sha512.b3951d6d6ff4a9f13dc7cf56cd28d2b8eb37dbcc9c68e52e1e1191873ea9f82a017287ab50baadc5ccc494f036c67c0e47eb13608c2fa36f47711b61ea128e61",
   "repository": {
@@ -32,13 +32,13 @@
     "clear:shadow-cache": "rm -rf .shadow-cljs && rm -rf target",
     "watch:app": "pnpm run build:wasm && pnpm run clear:shadow-cache && clojure -M:dev:shadow-cljs watch main",
     "watch": "pnpm run watch:app",
-    "build:app": "clojure -M:dev:shadow-cljs release main",
-    "build:wasm": "../render-wasm/build export",
-    "build": "pnpm run clear:shadow-cache && pnpm run build:app",
+    "build:app": "node init && clojure -M:dev:shadow-cljs release main",
+    "build:wasm": "node init && ../render-wasm/build export",
+    "build": "node init && pnpm run clear:shadow-cache && pnpm run build:app",
     "fmt:clj": "cljfmt fix --parallel=true src/ test/",
     "check-fmt:clj": "cljfmt check --parallel=true src/ test/",
     "lint:clj": "clj-kondo --fail-level error --parallel --lint src/ test/",
-    "build:test": "clojure -M:dev:shadow-cljs compile test",
+    "build:test": "node init && clojure -M:dev:shadow-cljs compile test",
     "test": "pnpm run build:test && PENPOT_SECRET_KEY=${PENPOT_SECRET_KEY:-test-secret-key} node target/tests/test.js",
     "test:quiet": "node ./scripts/test-quiet.js"
   }

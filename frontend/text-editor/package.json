@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/editor/TextEditor.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "node init && vite",
     "coverage": "vitest run --coverage",
     "wasm:update": "mkdir -p src/wasm && cp ../resources/public/js/render-wasm.wasm ./src/wasm/render-wasm.wasm && cp ../resources/public/js/render-wasm.js ./src/wasm/render-wasm.js",
     "test": "vitest --run",

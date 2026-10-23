@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "Documentation about Penpot project.",
   "scripts": {
-    "build": "eleventy",
+    "build": "node init && eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve",
-    "start": "eleventy --serve",
+    "start": "node init && eleventy --serve",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {

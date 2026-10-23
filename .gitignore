@@ -9,7 +9,6 @@
 .clj-kondo
 .cpcache
 .lsp
-.env
 .nrepl-port
 .nyc_output
 .rebel_readline_history
@@ -106,7 +105,6 @@ opencode.json
 /**/node_modules
 /**/.yarn/*
 /.pnpm-store
-/.vscode
 /.idea
 *.iml
 /.claude
@@ -126,3 +124,5 @@ opencode.json
 /scripts/__pycache__/
 /tools/__pycache__
 /scripts/__pycache__
+config.bat
+node_modules
